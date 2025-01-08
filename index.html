@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Nine tailed Whist</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="base">
+      <div class="game_board">
+      <div style="color: #005400; font-size: 12pt;font-weight: bold;text-align:center">
+        <script>
+          if (window.location.search) {
+            document.title = "Eight tailed fox's whist";
+            document.write("Yao's Whist");
+          } else {
+            document.write('Nine tailed Whist');
+          }
+        </script>
+      </div>
+        <table class="highscore">
+          <thead>
+            <tr>
+              <th>High Scores</th>
+              <th>Deals</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="hi_0_score">&nbsp;</td>
+              <td id="hi_0_deal"></td>
+              <td id="hi_0_day"></td>
+            </tr>
+            <tr>
+              <td id="hi_1_score">&nbsp;</td>
+              <td id="hi_1_deal"></td>
+              <td id="hi_1_day"></td>
+            </tr>
+            <tr>
+              <td id="hi_2_score">&nbsp;</td>
+              <td id="hi_2_deal"></td>
+              <td id="hi_2_day"></td>
+            </tr>
+            <tr>
+              <td id="hi_3_score">&nbsp;</td>
+              <td id="hi_3_deal"></td>
+              <td id="hi_3_day"></td>
+            </tr>
+            <tr>
+              <td id="hi_4_score">&nbsp;</td>
+              <td id="hi_4_deal"></td>
+              <td id="hi_4_day"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="msg_box">
+          <p id="game_msg">press START</p>
+        </div>
+        <div class="table_base">
+          <div class="opp_box">
+            <div class="trump_card card_blank" id="trump">
+            </div>
+            <div class="trump_card card_blank" id="opp_card">
+            </div>
+            <div class="trump_card card_back" id="yamahuda">
+              <p class="nokori" id="deck_cnt"></p>
+            </div>
+          </div>
+          <div class="trump_card card_blank" id="played_hand">
+          </div>
+        </div>
+        <div class="hand_base" id="player_hand">
+        </div>
+        <div class="but_box">
+          <button class="player_but" id="bid_button">START</button>
+        </div>
+      </div>
+      <div class="rule_book">
+        <h1>九尾狐のホイスト</h1>
+        <p>　Nine tailed (fox's) Whist は David Parlett 氏の <a href="https://www.parlettgames.uk/oricards/ninety9.html" target="_blank">99 (Ninety-Nine)</a> と Richard Hutnik 氏の <a href="https://boardgamegeek.com/boardgame/31266/oneonta-whist" target="_blank">Oneonta Whist</a> を元に考案した<ruby>ソリティア<rp>(</rp><rt>ひとりあそび</rt><rp>)</rp></ruby>です。プレイヤーは 12 枚の手札から獲得できるトリック数を予想し、手札のうち３枚を使ってビッド（予想を宣言すること）をします。9 枚の「敵の山札」が常に<ruby>先手<rp>(</rp><rt>リード</rt><rp>)</rp></ruby>でトリックをプレイし、1 トリックにつき 1 点が得られます。こうして手札が無くなったあと、ビッドに成功していれば 10 点のボーナスを獲得し次の<ruby>試合<rp>(</rp><rt>ディール</rt><rp>)</rp></ruby>に進みます。失敗したらそこでおしまいです。</p>
+        <p>　使用するカードはトランプの各スート A &gt; K &gt; Q &gt; J &gt; 10 &gt; 9 の合計 24 枚で、カードの強さはこの順になります。プレイヤーに 12 枚、敵の山札に 9 枚が配られたあと残る 3 枚のうち 1 枚が表向きにされます。このカードを「切り札」と呼びます。切り札は画面左上に表示されます。</p>
+        <p>　プレイヤーは手札から好きな 3 枚を「<ruby>勝ち数の予想<rp>(</rp><rt>ビッド</rt><rp>)</rp></ruby>」に使います。ビッドするために選んだカードは、<font color="red">♦</font>は 0 トリック、♠は 1 トリック、<font color="red">♥</font>は 2 トリック、♣は 3 トリックを取るぞという意味になり、3 枚の合計がプレイヤーの予想になります。ビッドに使ったカードはプレイに使えません。1 枚や 2 枚、4 枚以上でビッドすることはできません。</p>
+        <p>　ビッドが済んだら全 9 回の<ruby>手札勝負<rp>(</rp><rt>トリック</rt><rp>)</rp></ruby>を始めます： 毎回の<ruby>勝負<rp>(</rp><rt>トリック</rt><rp>)</rp></ruby>では敵の山札から 1 枚がめくられ、このカードを<b>リード</b>と呼びます。プレイヤーは手札の中にリードと同じスート（<font color="red">♦</font>♠<font color="red">♥</font>♣）のカードがあれば <b>絶対に出さねばならず</b>、出された 2 枚の<ruby>強さ<rp>(</rp><rt>ランク</rt><rp>)</rp></ruby>を比べて強い方の勝ちです。リードと同じスートが無ければ何を出しても構いませんが、必ず負けます。例外として、リードが切り札とは違うスートで、プレイヤーが出した手札が切り札と同じスートならカードのランクによらず常にプレイヤーの勝ちです。</p>
+        <p>　そんな手札勝負を「トリック」と呼び、勝者は否が応にも 1 トリックを獲得してしまいます——ゲームの目的はトリックに勝つことではなく、プレイヤーが獲得するトリック数を当てることです！</p>
+        <p>　トリックのたびに 1 枚ずつ手札を無くすので、獲得しうるトリック数は最大で 9 トリックです。始めに説明した通り<ruby>予想<rp>(</rp><rt>ビッド</rt><rp>)</rp></ruby>したトリック数ぴったりで勝つことができればボーナス 10 点を得て次の手札が<ruby>配られ<rp>(</rp><rt>ディール</rt><rp>)</rp></ruby>ます（結果さらなる得点を得るでしょう）。予想を外したらその時の得点でゲームオーバーになり、追加のディールをプレイすることはできません。</p>
+        <p>　できる限り正確な予想を繰り返してハイスコアを目指すゲームです。とりあえずの目標を 50 点としてプレイしてみてください。5 ディール生き残ればボーナス点だけで 50 点になりますが、そんな幸運はめったに訪れません。</p>
+        <br>
+        <h2>バリエーション: <ruby>八尾<rp>(</rp><rt>やお</rt><rp>)</rp></ruby>狐のホイスト</h2>
+        <p>　山札に各スートの 8 を追加した 28 枚で遊びます。8 のカードは 9 よりも弱いランクとして扱います。遊び方は上記と同じですが、手札や切り札、敵の山札にも使われない伏せカードが 6 枚に増えます。</p>
+        <p>　意外にもこちらの方がビッドを当てやすく、気楽にプレイできます。</p>
+        <p>　八尾のホイストは <a href="./?deck=7">【ここから】</a> プレイできます。ほとんど同じ画面が表示されますが画面のタイトルが Yao's Whist になっている他、山札の枚数が 28 枚に変化しています。URLが異なるので別のゲームとしてブックマーク可能です。</p>
+        <p>　九尾のゲームに戻りたいときは <a href="./">【こちら】</a> からどうぞ。</p>
+        <p style="font-size: 0.8em">　備考: 九尾の狐は主に東アジア地域で語り継がれている妖怪で多くの王朝を滅亡させました。八尾の狐は数世紀ほど前に病床の将軍を癒やしたと伝えられている妖怪です。</p>
+        <br>
+        <center>
+          <p><button class="player_but" onclick="if ( window.confirm('これまでのハイスコアを消去します - Delete the both(9 tailed & 8 tailed) high-scores...?') ) { localStorage.clear();location.reload(); }">八尾版を含めすべてのスコアを消去</button></p>
+          <p style="font-size: 0.6em">このプログラムは <a href="https://licenses.opensource.jp/MIT/MIT.html" target="_blank">MIT License</a> の下で自由に利用できます: (c) 2025/01/01 Hoeg.</p>
+        </center>
+        <br>
+      </div>
+    </div>
+    <script src="9w.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

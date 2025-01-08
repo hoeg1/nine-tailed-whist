@@ -1,0 +1,221 @@
+body {
+  margin: 0px;
+  font-size: 12pt;
+  font-family: sans-serif;
+}
+
+.base {
+  /*border: 1px solid red;*/
+  margin-top: 0.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.game_board {
+  border-radius: 13px;
+  margin: 0px;
+  padding: 0px;
+  width: 470px;
+  height: 560px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+
+  --my-bg: seagreen;
+  background-color: var(--my-bg);
+  --my-border: #004400;
+  border: 2px solid var(--my-border);
+}
+
+.table_base {
+  background-color: var(--my-bg);
+  /*background-color: yellow;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: 130px;
+  padding: 1em;
+}
+
+.hand_base {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  width: auto;
+  height: 68px;
+  /*background-color: #ffcc33;*/
+  background-color: var(--my-bg);
+}
+
+.trump_card {
+  background-color: white;
+  padding: 6px 0px;
+  margin: 1px 1px;
+  box-sizing: border-box;
+  width: 36px;
+  height: 56px;
+  font-size: 20px;
+  border: 1px solid #335533;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sel_for_bid {
+  margin-top: 12px;
+}
+
+.trump_card p {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1em;
+  letter-spacing: 0em;
+  font-size-adjust: ic-width;
+  font-size-adjust: 0.5;
+  cursor: pointer;
+}
+
+.dia {
+  font-family: Cursive;
+  color: #ff3300;
+}
+
+.spade {
+  font-family: Cursive;
+  color: #003366;
+}
+
+.heart {
+  font-family: Cursive;
+  color: #ff0000;
+}
+
+.club {
+  font-family: Cursive;
+  color: #006633;
+}
+
+.card_rank {
+  font-family: "Lucida Console";
+  font-weight: bold;
+}
+
+.card_back {
+  background-color: #deffc7;
+  background-image: repeating-linear-gradient(45deg, #6ed70880, #6ed70880 6px, transparent 6px, transparent 12px), repeating-linear-gradient(-45deg, #6ed70880, #6ed70880 6px, transparent 6px, transparent 12px);
+  padding-top: 1.5em;
+}
+
+.nokori {
+  color: #006600;
+  font-family: "Lucida Console";
+  font-weight: bold;
+}
+
+.card_blank {
+  background-color: var(--my-bg);
+}
+
+.rule_book {
+  width: 90%;
+  padding: 10px 5px;
+  font-size: 14pt;
+  line-height: 2em;
+  /*border: 1px solid blue;*/
+}
+
+.rule_book h1 {
+  font-size: 1.2em;
+  padding-left: 0.3em;
+  border-left: 0.5em solid;
+}
+
+.rule_book h2 {
+  font-size: 1em;
+  padding-left: 0.3em;
+  border-left: 0.35em solid;
+}
+
+
+.msg_box {
+  /*border:2px solid red;*/
+  background-color: var(--my-bg);
+  /*font-weight: bold;*/
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.msg_box p {
+  font-family: sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+.but_box {
+  /*border:2px solid red;*/
+  text-align:right;
+  padding: 0px 10px;
+  margin: 0;
+}
+
+.player_but {
+  font-family: monospace;
+  border-radius: 4px;
+  letter-spacing: 0.12em;
+  padding: 0.1em 1.2em;
+  background-color: #ff3300;
+  border: 2px solid #993300;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.player_but:disabled {
+  background-color: silver;
+  border: 2px solid #444;
+  color: black;
+  font-weight: bold;
+}
+
+
+.opp_box {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+}
+
+
+.highscore {
+  border-collapse: collapse;
+  border: 1px solid var(--my-border);
+  color: var(--my-border);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-align: right;
+  font-size: 10px;
+  line-height: 1em;
+  margin: 0px 2em;
+}
+
+th,td {
+  border: 1px solid var(--my-border);
+  padding: 6px 5px;
+}
+
+th {
+  background-color: green;
+  text-align: center;
+}
