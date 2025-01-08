@@ -1,6 +1,6 @@
 # 九尾狐のホイスト
 
-[▶今すぐに遊ぶ](https://hoeg1.github.io/nine-tailed-whist/)
+　[▶ 遊ぶ (Play Now)](https://hoeg1.github.io/nine-tailed-whist/)
 
 　Nine tailed (fox's) Whist は David Parlett 氏の 99 (Ninety-Nine) と Richard Hutnik 氏の Oneonta Whist を元に考案したソリティアです。プレイヤーは 12 枚の手札から獲得できるトリック数を予想し、手札のうち３枚を使ってビッド（予想を宣言すること）をします。9 枚の「敵の山札」が常に先手でトリックをプレイし、1 トリックにつき 1 点が得られます。こうして手札が無くなったあと、ビッドに成功していれば 10 点のボーナスを獲得し次の試合に進みます。失敗したらそこでおしまいです。
 
